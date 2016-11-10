@@ -2,11 +2,14 @@ package com.example.simon.androidweardatalayer;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,6 +21,7 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.wearable.DataApi;
 import com.google.android.gms.wearable.DataEvent;
 import com.google.android.gms.wearable.DataEventBuffer;
@@ -39,7 +43,7 @@ import java.util.HashMap;
 
 //Mobile Profile
 public class MainActivity extends AppCompatActivity implements
-        DataApi.DataListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener{
+        DataApi.DataListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
     private Activity activity;
     private GoogleApiClient googleClient;
@@ -81,6 +85,7 @@ public class MainActivity extends AppCompatActivity implements
         //data layer
         googleClient = new GoogleApiClient.Builder(this)
                 .addApi(Wearable.API)
+                .addApi(LocationServices.API)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
@@ -139,8 +144,28 @@ public class MainActivity extends AppCompatActivity implements
     protected APIInformation setUpAPIInformation(){
 
         APIInformation apiInformation = new APIInformation();
-
-        apiInformation.setAPIEndpoint("http://www.worldtides.info/api");
+        if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            ActivityCompat.requestPermissions(this, new String[] {
+                            "android.permission.ACCESS_COARSE_LOCATION",
+                            "android.permission.ACCESS_COARSE_LOCATION" },1);
+        }
+        Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
+                googleClient);
+        String Lat = "1";
+        String Long = "1";
+        if (mLastLocation != null) {
+            Lat = String.valueOf(mLastLocation.getLatitude());
+            Long = String.valueOf(mLastLocation.getLongitude());
+        }
+        //apiInformation.setAPIEndpoint("http://www.worldtides.info/api");
+        apiInformation.setAPIEndpoint("http://nexttrain.fr/api/live-proche/"+Lat+"/"+Long);
         HashMap arguments = new HashMap<String, String>();
 
         arguments.put("key", "1d3d0a79-5d7d-48d3-9e80-a5383e53eba2");
@@ -214,12 +239,23 @@ public class MainActivity extends AppCompatActivity implements
                 //create a new json object
                 try{
                     JSONObject jsonObject = new JSONObject(data);
-                    if(jsonObject.has("heights")){
+                    if(jsonObject.has("titre")){
+                        String titre = jsonObject.getString("titre");
 
-                        JSONArray heights = (JSONArray) jsonObject.get("heights");
-                        //loop through all 'heights' objects to get data
+                        //convert date unix string to a human readable format
+                        Date date = new Date();
+                        DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
+                        String dateFormatted = format.format(date);
 
-                        for(int i = 0; i < heights.length(); i++){
+                        //add our data to be passed back to the wearable
+                        putDataMapRequest.getDataMap().putString("unixTime", dateFormatted);
+                        putDataMapRequest.getDataMap().putString("height", titre);
+
+                        JSONArray jsonArray = (JSONArray) jsonObject.getJSONObject("passages").get("train");
+                        putDataMapRequest.getDataMap().putString("jsonArray", jsonArray.toString());
+                        //loop through all 'train' objects to get data
+
+/*                        for(int i = 0; i < heights.length(); i++){
                             //get the specific object from the set
                             JSONObject heightObject = heights.getJSONObject(i);
                             //get our time and height values
@@ -230,23 +266,23 @@ public class MainActivity extends AppCompatActivity implements
                             String heightTrimmed = height.substring(0, 5);
 
                             //convert date unix string to a human readable format
-                            Date date = new Date(unixTime * 1000L);
-                            DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
-                            String dateFormatted = format.format(date);
+                            //Date date = new Date(unixTime * 1000L);
+                            //DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
+                            //String dateFormatted = format.format(date);
 
                             //add our data to be passed back to the wearable
-                            putDataMapRequest.getDataMap().putString("unixTime", dateFormatted);
-                            putDataMapRequest.getDataMap().putString("height", heightTrimmed);
-                        }
+                            //putDataMapRequest.getDataMap().putString("unixTime", dateFormatted);
+                            //putDataMapRequest.getDataMap().putString("height", heightTrimmed);
+                        }*/
                     }else{
-                        Log.d("error", "there was no height parm returned from the API");
+                        Log.d("error", "there was no titre parm returned from the API");
                         putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API");
                     }
 
                 }catch(Exception e){
                     //couldn't create the JSON object
                     Log.d("error", "error creating the json object: " + e.getMessage());
-                    putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API");
+                    putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API "+ e.getMessage());
                 }
 
             }

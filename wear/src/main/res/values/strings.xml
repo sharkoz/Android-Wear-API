@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Get Tide</string>
-    <string name="button_text">Latest Tide Info</string>
-    <string name="subtitle">Get the latest tide information</string>
-    <string name="loading_text">Loading...</string>
+    <string name="app_name">NextTrain</string>
+    <string name="button_text">Rafraîchir</string>
+    <string name="subtitle">Récupérer les horaires</string>
+    <string name="loading_text">Chargement...</string>
 </resources>

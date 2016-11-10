@@ -2,88 +2,571 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-plus\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_3aa048f15ad9d7dbdfb79a39dc892fe2dd150141\classes.dex" />
+        sha1="c96952c162c9f6076f44c5939982cb35491442ea">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-plus-9.0.2_a42e9ef6411eab1be9e4b09df1ba8f4277d1b28b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\androidSDK\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
         jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_c2cdc9894c405c54cb65068ff324b3c02ef9ba21\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.0"
         sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_de87742c31c977a5a97f2b7f4c1663ca9c1eadd9\classes.dex" />
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_e14cdd728c81b3a021390564471641dba6839fcd\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-gcm\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="816d505837792eeb9f19581923799932da0ecd0a">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_11f6a47f4a986ad6b0f2f53ff0dd967406789e2f\classes.dex" />
+        sha1="e6970f0554f9508c041f1f6960af15cc888c9f35">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-gcm-9.0.2_b550566bfd9b411e56ecad1434290aebde8d2a17\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.android.support\wearable\2.0.0-alpha1\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-storage-common\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="198f86964d1fe34215742672a4e095f916f0f4d9">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.support-wearable-2.0.0-alpha1_2a4e50ebb151a23b961dacfd5b52bd8c953295b6\classes.dex" />
+        sha1="6ff48ef26bc539c78af4aa061cb9bad6abcbf5e8">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-common-9.0.2_4269088edef7569b05c1474f7f65cb5064589d30\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="80c803cfcb8b498be5c82337693ed91263ef0a3e">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_6522a5ca8cbb0a5ba678a3fba390027b672dd19a\classes.dex" />
+        sha1="20e1a0f0de6276a5f36062b655f8b20f8cc00cc4">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.0.2_6a199599f6543b15c03dfde4424b0f1dc8f04756\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.0.2\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-config\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="764d32faf85bc6f7bd2cdcb3a70a482c1884fdd2">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.0.2_6f8ddb0beb859670262d5cd4ff81ecb4b004562e\classes.dex" />
+        sha1="604ecf403feb0084dc6d0c12f1677a490cf45e4c">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-config-9.0.2_943edd6a2c3e895833bde17453e4cd63d3b65987\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_0289051a87c20db8531835f98556e8731ac3ce28\classes.dex" />
+        sha1="f4fb6981392ca7680d02fd57d26d6124c141d9d9">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-9.0.2_ca9f3cdf3cf46af1dbac25d6030cf00fcd1bf138\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-cast\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_f528229c28fc117cfa2b856d15f07e8aa56250e7\classes.dex" />
+        sha1="a45bc1ed812137b21dddd1cedaa3712b308f0b3f">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-cast-9.0.2_b346d29248742d4f892366c93947c7f11ef708f6\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_6e90916d4023e23bbd938f0eb327384e97adeddc\classes.dex" />
+        sha1="d9ea4cdaafa29ec4651d6e4715788d3fcaa7b913">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-9.0.2_39d1a226d95bfb047982fd693bff94be90962852\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_a4ddf2e78cc0773a62933eb7603203b116df7035\classes.dex" />
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_41beed09e3b23bc2a172862449a636b0ae63a8ba\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
         revision="23.0.0"
-        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_869646a1f24c5e9053e6659579a7a3dce027d811\classes.dex" />
+        sha1="9919563cffd8e3732e944d3c437d4b9575a08448">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.2_354745123e85eacb7e47a8b1785af459637972db\classes.dex" />
     </item>
     <item
-        jar="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-common\9.0.2\jars\classes.jar"
         jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="568d5bda0b4d51f90d978ace369bb9ad024d2057">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-common-9.0.2_90bf336b59c1a7c8a8330f557e0df2b8097bc24a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="a511c684ea4c2cf31a3377d51e7677cb76696e07">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.0.2_7dab364fc5c6e9e145442f182d64afb37460c9ea\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="b3d0809a742c5f768c6aa9efc6decd5c1d6cd227">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.0.2_3bf2b4b009f8740f28fd6b2249d44359ad1cff1d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="46343c2b2ec46939d452975dc60d3c4d99ed048c">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_9666d1a742d0f40c17c4277dac7829b9633c3ad2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="d358b3dd49a7c67844622dcbc9cf4339e13952ce">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-mediarouter-v7-23.0.0_0dea2f93cd78a7628ccf1d9680c0642a078b2c2a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
         revision="23.0.0"
         sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
-        <dex dex="C:\Users\simon\Documents\Android App Tests\AndroidWearDataLayer\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_541722d0d17b3e80dd0166e64e68832db41a9688\classes.dex" />
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_9110dd69452632c03dee02070cdf8e6a11f257fb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-identity\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="0c835e9f3875cf245877c9b17d1c69bc98f16057">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-identity-9.0.2_7c1c717ffafd61f8b98c10fffc90247b12628f25\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_05e63f6c667b7a56f46dd1d5280245dcddab5437\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="d900f2a1ff098cac8befe6c023d723e9afb154be">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.0.2_ae5c82c0bbe8cde36fc1a9989addc98ec056e2a2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-drive\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="143813b18381b28de1e04aae1d92fcb374a0add9">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-drive-9.0.2_0354acf885a1397e68530caf60631a0844ca4049\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="eaf8844af87297f9055fc467fff01778e7bd1c28">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_8030c19d5e502b2a94332cf0648809c48d8249b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-nearby\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="7e52b440a26498c56b4f263e215223b5451c955e">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-nearby-9.0.2_ccb6470b570df0dbf7b2a95994f55c7da847ca72\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="f2774b1e02e5fbc524590311a744263c3b152d63">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-messaging-9.0.2_677e858905e41afd9f5bb6c80f0686a451e9e2c6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.1_2063d97ef08b712899f92bf8cfa1c17f83f9ad6a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-tagmanager-api\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="f399a2fde7888450cadcaec4974bfd169d8cce43">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tagmanager-api-9.0.2_476f22f59a7b944309e3a9629dbef2380c94dc5f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-games\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="a498fab72f8663c26fbf3d4496eb6b673b17bcae">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-games-9.0.2_05233106d16ced2e163a07385c31c999d76955b9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-database\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4ec890171a97b5ab98292f131aa784e0f3792c73">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-9.0.2_9a4beca30bcfe80e471ac0f98f7f107c36d7cae9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="fe5b47e764869f1076cb9cfe12801ed2ef4e9117">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-9.0.2_6883bac577ab9fc504388e5f79753b97fc312bc2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-appinvite\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="e11da70cff6a544a45cdc21f419802d9bb9043ac">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appinvite-9.0.2_5b9065e03d24f5876c7ea189098016f504fa76f6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="060a7157438a0b1b0706b99c430fb3ecbc5a79a4">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-9.0.2_67e2e5a2d11a9e461a618abe24353e6dffbab7c2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-ads-lite\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="b8e0372ca6dc89ac4fe22b76eeea4f68ece435b8">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-ads-lite-9.0.2_4b66d366c394f1cafaf57a39f0d53926c0ed51f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.1_8b8ffd084c52fa0a3891f2d077e76b8da50e0bae\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_12f3989a6d5b732518604655681fa1cd43a2f151\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\androidSDK\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.1_c95e769c9e70e3cc279c6a1426e4c8fc579875d2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wallet\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="bc156efaaee99f1ef6bf471347373a4cbb28e2a1">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wallet-9.0.2_a023abde815c91e8b058dde3f4226c6228d86d62\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4022261eeea0d92eb2997a68d2c1f084a16abad9">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.2_167d3d46f82f153e26c8385a90beac6b3b315f84\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-storage\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="cd4c7c54e15d9ccbc448384fa2c4684d69ca73f0">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-storage-9.0.2_ce3f92f80f2a571eee43b7d10dc5ec80dfaf67a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-panorama\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8c0fc9b1ea0bac0cb31d60c8b1bf2feb0518e3a9">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-panorama-9.0.2_3cc513b10736dfab0dae9e0df58259e5937f1f0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-location\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="92a1d5f71b0fc8938f1d3f2e6ef984b52b894b4d">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-location-9.0.2_761667f0fbe874a77bbaf29c8523abb81416b3d9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="5711af09bc1714d90b6d3290bf598666370ddcbc">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fb7766285a41b10ef05ca0d839664b9024c51ec8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-safetynet\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="b6af089f583d547bcffc0689b2e80bc7aaa54b15">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-safetynet-9.0.2_f15d82506ff82031594bd91999470c1a87a33523\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="829c6e46cb221c2102801221c648b77113743e81">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-auth-base-9.0.2_eb001ac12da7b9d85b071843366aa1e8e77a0ba8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="764d32faf85bc6f7bd2cdcb3a70a482c1884fdd2">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.0.2_adba0a2203aae81245da6f66428d496e7e5c1b63\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-fitness\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="53f10fcd322a3931495d6ca2078a81f4957cdbce">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-fitness-9.0.2_6e4458ac551e83181778a969c38656a13064499e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-vision\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="2ab5be19bbd34bae74662ea6b2d4451314d92d97">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-vision-9.0.2_982cb7a7e48462583af695a285e1d3c4da704e79\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.android.support\mediarouter-v7\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="03d38bb042efe3e5ce27ba66b729a9523c36d8fe">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_dccbb083b632af87aa2481a40485c37211c307e1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="aec1bc54964a85d851c2c1b1cb7f90f7dbd755ab">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.2_23081f4577c8b4c949944c54c1c9989fcb844702\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-auth\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="fa472b7cbd3897bf6bed6068ac0b00e494987688">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-9.0.2_93a6565162b6a864a236384a23c48fcc8951021e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-iid\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="cf16220db9128d91a215aedc739584181d5ca6a4">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-iid-9.0.2_bd68d6a888f67eefffb7ad2d64517573be013547\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-auth-module\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="79e298d7fed2fcada58da7032d07d34ee198a545">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-auth-module-9.0.2_85add9551bf94e5c607c5953ad2c5ad6c88d0aee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="82131310f36389dd937760d3eae75837521da964">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1027c2674b6d38b70233297ec12cdb7b386a3cee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_f94d79477c7a99ef66f45981bf2a55a8c53044f1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.0.0_bd58b7846cfdef95e055a177da4a1e35d08e0d47\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="922c24fbfc4247947fcfaf2b95f295a16a8c3d17">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-crash-9.0.2_162937ad4cbb9ac97ab1d0636a0724290e79bd19\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.0.1_46dbf0352c181e805d8a4f31177c884851086fb1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="94d9cedd04b124aed044ac71c451a292856d854c">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.2_3c2fb145e062fe1141607fb302dfcd276e42baab\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.android.gms\play-services-wearable\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="764d32faf85bc6f7bd2cdcb3a70a482c1884fdd2">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-wearable-9.0.2_81f0ed2214d53ad69783ff1a68cdae4b5a093542\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="51a11c41a08f099a204e1b8dcc04f27217de50ec">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.0.2_abc298eb3abad7f492b75c78d63e5b06331e3eb3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\exploded-aar\com.google.android.support\wearable\2.0.0-alpha1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="198f86964d1fe34215742672a4e095f916f0f4d9">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\wear\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.support-wearable-2.0.0-alpha1_66df235ac4b21a983bafac8b42fe980965796db9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.android.gms\play-services-analytics-impl\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="6c58c14d15602fea2c50138c73bb107e8b832b62">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-analytics-impl-9.0.2_887f52aa5ddd962b77d9f5dd031fbf1980c93bbc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\exploded-aar\com.google.firebase\firebase-database-connection\9.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="9819419ce8d79f3f81a0fc70f9345ac8c843af9c">
+        <dex dex="G:\Cosme\AndroidProjects\Android-Wear-API\mobile\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-database-connection-9.0.2_335d170a7e1e32f3cdb733aa0681d36d7070e92d\classes.dex" />
     </item>
 
 </items>
