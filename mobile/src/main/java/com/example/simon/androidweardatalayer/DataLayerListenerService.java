@@ -8,20 +8,14 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.AsyncTask;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.util.Log;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.data.FreezableUtils;
 import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.wearable.DataApi;
@@ -38,22 +32,21 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.text.DateFormat;
-import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-//Mobile Profile
-public class MainActivity extends AppCompatActivity implements
-        DataApi.DataListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
+public class DataLayerListenerService extends WearableListenerService //implements
+        //DataApi.DataListener, GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener
+        {
 
     private Activity activity;
     private GoogleApiClient googleClient;
     private TextView messageContainer;
 
+/*
     //on successful connection to play services, add data listner
     public void onConnected(Bundle connectionHint) {
         Wearable.DataApi.addListener(googleClient, this);
@@ -61,7 +54,6 @@ public class MainActivity extends AppCompatActivity implements
 
     //on resuming activity, reconnect play services
     public void onResume(){
-        super.onResume();
         googleClient.connect();
     }
 
@@ -72,7 +64,6 @@ public class MainActivity extends AppCompatActivity implements
 
     //pause listener, disconnect play services
     public void onPause(){
-        super.onPause();
         Wearable.DataApi.removeListener(googleClient, this);
         googleClient.disconnect();
     }
@@ -82,10 +73,7 @@ public class MainActivity extends AppCompatActivity implements
         Wearable.DataApi.removeListener(googleClient, this);
     }
 
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        this.activity = this;
+    public void onCreate() {
 
         //data layer
         googleClient = new GoogleApiClient.Builder(this)
@@ -94,36 +82,54 @@ public class MainActivity extends AppCompatActivity implements
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
-
-        messageContainer = (TextView) findViewById(R.id.messageContainer);
-
     }
+*/
 
+    private static final String TAG = "DataLayerSample";
 
     //watches for data item
     public void onDataChanged(DataEventBuffer dataEvents) {
-        for(DataEvent event: dataEvents){
+        if (Log.isLoggable(TAG, Log.DEBUG)) {
+            Log.d(TAG, "onDataChanged: " + dataEvents);
+        }
+        final List events = FreezableUtils
+                .freezeIterable(dataEvents);
+       GoogleApiClient googleClient = new GoogleApiClient.Builder(this)
+                .addApi(Wearable.API)
+                .addApi(LocationServices.API)
+                //.addConnectionCallbacks(this)
+                //.addOnConnectionFailedListener(this)
+                .build();
+
+        ConnectionResult connectionResult =
+                googleClient.blockingConnect(30, TimeUnit.SECONDS);
+
+        if (!connectionResult.isSuccess()) {
+            Log.e(TAG, "Failed to connect to GoogleApiClient.");
+            return;
+        }
+        for (DataEvent event : dataEvents) {
 
             //data item changed
-            if(event.getType() == DataEvent.TYPE_CHANGED){
+            if (event.getType() == DataEvent.TYPE_CHANGED) {
 
                 DataItem item = event.getDataItem();
                 DataMapItem dataMapItem = DataMapItem.fromDataItem(item);
 
                 //received initiation message, start the process!
-                if(item.getUri().getPath().equals("/apiurl_old")){
+                if (item.getUri().getPath().equals("/apiurl")) {
 
 
                     String message = dataMapItem.getDataMap().getString("message");
-                    messageContainer.setText(message);
+                    //messageContainer.setText(message);
 
                     //BUILD API ARGUMENTS
                     //populate our API information, in preparation for our API call
-                    APIInformation apiInformation = setUpAPIInformation();
+                    APIInformation apiInformation = setUpAPIInformation(googleClient);
 
 
                     //EXECUTE ASYNC TASK
-                    APIAsyncTask asyncTask = new APIAsyncTask();
+                    DataLayerListenerService.APIAsyncTask asyncTask = new DataLayerListenerService.APIAsyncTask();
                     asyncTask.execute(apiInformation);
 
                 }
@@ -133,12 +139,12 @@ public class MainActivity extends AppCompatActivity implements
 
 
     //checks to see if we are online (and can access the net)
-    protected boolean isOnline(){
-        ConnectivityManager connectivityManager = (ConnectivityManager) activity.getSystemService(Context.CONNECTIVITY_SERVICE);
+    protected boolean isOnline() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) getBaseContext().getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
 
         boolean connected = false;
-        if((networkInfo != null) && (networkInfo.isConnected())){
+        if ((networkInfo != null) && (networkInfo.isConnected())) {
             connected = true;
         }
 
@@ -146,7 +152,7 @@ public class MainActivity extends AppCompatActivity implements
     }
 
     //populates information for our API
-    protected APIInformation setUpAPIInformation(){
+    protected APIInformation setUpAPIInformation(GoogleApiClient googleApiClient) {
 
         APIInformation apiInformation = new APIInformation();
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -157,12 +163,14 @@ public class MainActivity extends AppCompatActivity implements
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            ActivityCompat.requestPermissions(this, new String[] {
-                            "android.permission.ACCESS_COARSE_LOCATION",
-                            "android.permission.ACCESS_COARSE_LOCATION" },1);
+
+            // A voir si nécessaire d'ouvrir l'appli avant...
+            /*ActivityCompat.requestPermissions(this, new String[] {
+                    "android.permission.ACCESS_COARSE_LOCATION",
+                    "android.permission.ACCESS_COARSE_LOCATION" },1);*/
         }
         Location mLastLocation = LocationServices.FusedLocationApi.getLastLocation(
-                googleClient);
+                googleApiClient);
         String Lat = "1";
         String Long = "1";
         if (mLastLocation != null) {
@@ -170,11 +178,11 @@ public class MainActivity extends AppCompatActivity implements
             Long = String.valueOf(mLastLocation.getLongitude());
         }
         //apiInformation.setAPIEndpoint("http://www.worldtides.info/api");
-        apiInformation.setAPIEndpoint("http://nexttrain.fr/api/live-proche/"+Lat+"/"+Long);
+        apiInformation.setAPIEndpoint("http://nexttrain.fr/api/live-proche/" + Lat + "/" + Long);
         HashMap arguments = new HashMap<String, String>();
 
         arguments.put("key", "1d3d0a79-5d7d-48d3-9e80-a5383e53eba2");
-        arguments.put("heights",""); //we want the heights only
+        arguments.put("heights", ""); //we want the heights only
         arguments.put("lat", "-34.057440"); //cronulla sydney
         arguments.put("lon", "151.152190"); //cronulla sydney
         arguments.put("step", "21600"); //6 hours
@@ -206,7 +214,7 @@ public class MainActivity extends AppCompatActivity implements
             boolean isOnline = isOnline();
             HashMap result;
 
-            if(isOnline()){
+            if (isOnline()) {
 
                 //perform a HTTP request
                 APIUrlConnection apiUrlConnection = new APIUrlConnection();
@@ -214,7 +222,7 @@ public class MainActivity extends AppCompatActivity implements
                 //get the result back and process
                 result = apiUrlConnection.GetData(apiInformation.getAPIUrl());
 
-            }else{
+            } else {
                 //we're not online, flag the error
                 result = new HashMap();
                 result.put("type", "failure");
@@ -231,20 +239,20 @@ public class MainActivity extends AppCompatActivity implements
         //Execute once we're done
         protected void onPostExecute(HashMap result) {
             super.onPostExecute(result);
-
+            Log.d("warn", "Started async");
             //build our message back to the wearable (either with data or a failure message)
             PutDataMapRequest putDataMapRequest = PutDataMapRequest.create("/responsemessage");
             putDataMapRequest.getDataMap().putLong("time", new Date().getTime());
 
             //success (we collected our data from the API)
-            if(result.get("type") == "success"){
+            if (result.get("type") == "success") {
                 //get the json response data string
                 String data = (String) result.get("data");
 
                 //create a new json object
-                try{
+                try {
                     JSONObject jsonObject = new JSONObject(data);
-                    if(jsonObject.has("titre")){
+                    if (jsonObject.has("titre")) {
                         String titre = jsonObject.getString("titre");
 
                         //convert date unix string to a human readable format
@@ -258,41 +266,21 @@ public class MainActivity extends AppCompatActivity implements
 
                         JSONArray jsonArray = (JSONArray) jsonObject.getJSONObject("passages").get("train");
                         putDataMapRequest.getDataMap().putString("jsonArray", jsonArray.toString());
-                        //loop through all 'train' objects to get data
 
-/*                        for(int i = 0; i < heights.length(); i++){
-                            //get the specific object from the set
-                            JSONObject heightObject = heights.getJSONObject(i);
-                            //get our time and height values
-                            Integer unixTime = Integer.parseInt(heightObject.getString("dt"));
-                            String height = heightObject.getString("height");
-
-                            //need to process the values to make them readable.
-                            String heightTrimmed = height.substring(0, 5);
-
-                            //convert date unix string to a human readable format
-                            //Date date = new Date(unixTime * 1000L);
-                            //DateFormat format = new SimpleDateFormat("dd/MM/yyyy hh:mm a");
-                            //String dateFormatted = format.format(date);
-
-                            //add our data to be passed back to the wearable
-                            //putDataMapRequest.getDataMap().putString("unixTime", dateFormatted);
-                            //putDataMapRequest.getDataMap().putString("height", heightTrimmed);
-                        }*/
-                    }else{
+                    } else {
                         Log.d("error", "there was no titre parm returned from the API");
                         putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API");
                     }
 
-                }catch(Exception e){
+                } catch (Exception e) {
                     //couldn't create the JSON object
                     Log.d("error", "error creating the json object: " + e.getMessage());
-                    putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API "+ e.getMessage());
+                    putDataMapRequest.getDataMap().putString("error", "There was an issue processing the JSON object returned from API " + e.getMessage());
                 }
 
             }
             //failure (couldn't connect to the API or collect data)
-            else if(result.get("type") == "failure"){
+            else if (result.get("type") == "failure") {
                 Log.d("error", "There was an issue connecting to the API.");
                 putDataMapRequest.getDataMap().putString("error", result.get("error").toString());
             }
@@ -300,8 +288,13 @@ public class MainActivity extends AppCompatActivity implements
             //finalise our message and send it off (either success or failure)
             PutDataRequest putDataRequest = putDataMapRequest.asPutDataRequest();
             putDataRequest.setUrgent();
+            GoogleApiClient googleClient = new GoogleApiClient.Builder(getApplication())
+                    .addApi(Wearable.API)
+                    .addApi(LocationServices.API)
+                    .build();
+            googleClient.connect();
             PendingResult<DataApi.DataItemResult> pendingResult = Wearable.DataApi.putDataItem(googleClient, putDataRequest);
+            Log.d("warn", "async ended");
         }
     }
 }
-
